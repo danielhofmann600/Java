@@ -1,5 +1,6 @@
 package emqualification;
 
+import java.io.PrintStream;
 import java.util.List;
 
 /**
@@ -48,11 +49,12 @@ public class Main {
     }
 
     private static void printResultTable(List<Team> resultTable) {
-        System.out.println("Team           Points +  -  0 shot rec diff");
-        for (Team team : resultTable) {
-            System.out.printf("%-15s   %2d %2d %2d %2d  %2d  %2d  %3d%n", team.getName(), team.getPoints(),
-                    team.getWins(), team.getDefeats(), team.getDraws(), team.getGoalsShot(),
-                    team.getGoalsReceived(), team.getGoalDifference());
-        }
+        System.out.println("Team           Points +  -  0 shot rec diff"); 
+        PrintStream printf = System.out.printf("%-15s   %2d %2d %2d %2d  %2d  %2d  %3d%n",resultTable.get(0).getName(),1,1,1,1,1,1,1);
+        /*
+         resultTable.get(0).getName(), resultTable.get(0).getPoints(), resultTable.get(0).getWins()
+                , resultTable.get(0).getDefeats(), resultTable.get(0).getDraws(), resultTable.get(0).getGoalsShot(), resultTable.get(0).getGoalsReceived(), resultTable.get(0).getGoalDifference())
+                 
+                 */
     }
 }
